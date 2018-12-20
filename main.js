@@ -64,7 +64,7 @@
 	}
 
 	var text;
-	var osutext = "file:///C:/Users/fuji/Documents/MyProgs/OSUJS/7850 Haru - March Handyman (Instrumental)/Haru - March Handyman (Instrumental) (Metroid) [Hard].osu";
+	var osutext = "7850 Haru - March Handyman (Instrumental)/Haru - March Handyman (Instrumental) (Metroid) [Hard].osu";
 	readTextFile(function(t){
 			text = t.split("\n");
 		}, osutext);
