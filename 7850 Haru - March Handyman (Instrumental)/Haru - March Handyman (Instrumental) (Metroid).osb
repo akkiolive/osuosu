@@ -1,0 +1,12 @@
+[Events]
+//Background and Video events
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+Sprite,Foreground,Centre,"clouds-0.png",-735,200
+ F,0,30790,34068,0,1
+ M,0,30790,103716,1376,201,-736,200
+ P,0,30790,103716,H
+ F,0,100475,103716,1,0
+//Storyboard Sound Samples
