@@ -18,8 +18,8 @@
 	var canvas = document.getElementById("stage");
 	var ctx = canvas.getContext("2d");
 
-	var width = 1000;
-	var height = 800;
+	var width = 568;
+	var height = 320;
 
 	canvas.width = width;
 	canvas.height = height;
@@ -33,6 +33,10 @@
 	var mouseClickFlag = 0;
 	var hVisibleList = [];
 	canvas.addEventListener("mousedown", function(event){
+		if(!playing){
+			gameStart();
+		}
+		
 		mouseClickFlag = 1;
 		for(var i of hVisibleList){
 			if(hits[i].clicked) continue;
@@ -83,7 +87,7 @@
 			this.r = 50;
 			this.point = 0;
 			this.clicked = 0;
-			this.duration = 30000;
+			this.duration = 1000;
 			this.xx = this.x*(width/512);
 			this.yy = this.y*(height/384);
 		}
@@ -153,7 +157,7 @@
 
 	var playing = 0;
 	var startTime;
-	document.getElementById("Play").addEventListener("click", function(){
+	function gameStart(){
 		playSound("test", 0);
 		playing = 1;
 		startTime = context.currentTime*1000;
@@ -163,15 +167,8 @@
 		for(var h of hits){
 			playSound("click", h.time/1000); 
 		}
-	}, false);
-
-	document.getElementById("Click").addEventListener("click", function(){
-		playSound("click");
-		console.log("click");
-	}, false);
-
+	}
 	
-
 	var t = 0;
 	var num1 = 0;	
 	var num2 = 0;

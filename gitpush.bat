@@ -1,4 +1,4 @@
 git add --all
 git commit -m "gitpush"
-git push -u origin master > aaa
+git push -u origin master
 
