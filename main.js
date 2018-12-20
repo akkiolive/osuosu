@@ -1,4 +1,18 @@
 (function(){
+	//load zipjs
+	//Zip.inflate_file("7850 Haru - March Handyman (Instrumental).osz", function (zip) {
+	Zip.inflate_file("test.zip", function (zip) {
+		//var file = zip.files["Haru - March Handyman (Instrumental) (Metroid) [Hard].osu"]; // console.logすると大体の構成がわかる (説明が面倒なだけ)
+		var file = zip.files["test.txt"]; // console.logすると大体の構成がわかる (説明が面倒なだけ)
+		console.log(file.data);
+		var s = [];
+		file.data.forEach(function(val, index, array){
+			s.push(String.fromCharCode(val));
+		});
+		console.log(s);
+		
+	});
+
 	//initialize web audio api
 	var context;
 	var audioList = {};
@@ -84,7 +98,7 @@
 			this.hitSound = Number(hitSound);	
 			this.visible = 0;
 			this.visibleprev = 0;	
-			this.r = 50;
+			this.r = 30;
 			this.point = 0;
 			this.clicked = 0;
 			this.duration = 1000;
